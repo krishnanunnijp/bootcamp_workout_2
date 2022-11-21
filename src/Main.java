@@ -32,6 +32,14 @@ public class Main {
                     input1 = sc.nextInt();
                     System.out.println(primeOrNot(input1));
                     break;
+                case 4:
+                    input1 = sc.nextInt();
+                    System.out.println(evenOrNot(input1));
+                    break;
+                case 5:
+                    input1 = sc.nextInt();
+                    System.out.println(Reverse(input1));
+                    break;
 
 
 
@@ -43,6 +51,15 @@ public class Main {
         }
     }
 
+    private static int Reverse(int input1) {
+
+        int value=input1,reverse=0;
+        while(value!=0){
+            reverse=reverse*10+(value%10);
+            value=value/10;
+        }
+        return reverse;
+    }
 
 
     private static int largestOfThree(int input1, int input2, int input3) {
@@ -62,6 +79,13 @@ public class Main {
             return input2;
         } else {
             return input3;
+        }
+    }
+    private static String evenOrNot(int input1) {
+        if(input1%2==0){
+            return "even number";
+        }else {
+            return "not a even number";
         }
     }
 
