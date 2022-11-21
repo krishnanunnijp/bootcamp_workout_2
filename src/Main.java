@@ -21,6 +21,13 @@ public class Main {
                      input2 = sc.nextInt();
                      input3 = sc.nextInt();
                     System.out.println(largestOfThree(input1,input2,input3));
+                    break;
+                case 2:
+                    input1= sc.nextInt();
+                    input2 = sc.nextInt();
+                    input3 = sc.nextInt();
+                    System.out.println(smallestOfThree(input1,input2,input3));
+                    break;
 
 
                 default :
@@ -36,6 +43,16 @@ public class Main {
             return input1;
         }
         else if(input2>input1 && input2>input3) {
+            return input2;
+        }else{
+            return input3;
+        }
+    }
+    private static int smallestOfThree(int input1, int input2, int input3) {
+        if(input1<input2 && input1<input3) {
+            return input1;
+        }
+        else if(input2<input1 && input2<input3) {
             return input2;
         }else{
             return input3;
